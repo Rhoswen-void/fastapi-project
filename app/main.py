@@ -89,7 +89,7 @@ def update_post(id: int, post: Post):
     index = find_id(id)
 
     if index != None:
-        post_dict = post.model_dump()
+        post_dict = post.model_dump() #Converting the the post into a normal python dictionary
         post_dict['id'] = id
         my_posts[index] = post_dict
         return {"message": "Updated post."}
@@ -98,3 +98,4 @@ def update_post(id: int, post: Post):
                             detail=f"The post u wanted to update does not exist.")
         
 
+#FastAPI does the documentation for your API on its own.
