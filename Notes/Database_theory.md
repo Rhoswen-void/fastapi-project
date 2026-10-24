@@ -11,9 +11,9 @@
 - Oracle
 - SQL server
 
-We will Primalrarily be working with PostgresSQL
+##### We will Primalrarily be working with PostgresSQL
 ---
-### PostgresSQL Database
+## PostgresSQL Database
 
 
 ---
