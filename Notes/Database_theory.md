@@ -44,21 +44,41 @@
 ---
 - ### Data Query Language (DQL)
     - > SELECT column1, column2 FROM table_name; (Gives Table info consisting only those two columns)
+
     - > SELECT * FROM table_name; (Gives all the attributes of those tables)
     - ![This gives the list of entries which start with 'TV'](./Images/SELECT_QUERY.png)
+
     - ![This gives the list of entries which ends with 'r'](./Images/SELECT_QUERY2.png)
+
+    - ![This gives the list of entries and orders them by their price ascending Order](./Images/SELECT_QUERY3.png)
+
+    - ![This uses filtering and ordering concept but also limits the values to n entries](./Images/SELECT_QUERY4.png)
+
+    - > When OFFSET 2 is used it skips the first 2 entries and then gives the remaining entries
+
 ---
 - ### Data Manipulation Language (DQL)
     - > INSERT INTO table_name (column1, column2) VALUES (value1, value2), (value3, value4)     RETURNING column1; (Adds data to column1 and column2, RETURNING returns the entered data in column1)
+    - ![Inserts a new value in the table](./Images/INSERT_QUERY1.png)
+
+    - ![Inserts a new value in the table and also returns the inserted value](./Images/INSERT_QUERY2.png)
+
     - > UPDATE table_name SET column1 = new_value1, column2 = new_value2 WHERE condition; (Modifies data and then returns)
+    - > ![Updates a specified value in the table](./Images/UPDATE_QUERY1.png)
+
     - > DELETE FROM table_name WHERE condition; (Deletes the row satisfying the given condition)
+    - ![Deletes a specified value from the table](./Images/DELETE_QUERY1.png)
 ---
 - ### Data Definition Language (DDL)
     - > CREATE TABLE table_name (id SERIAL PRIMARY KEY, username VARCHAR(50) NOT NULL UNIQUE,created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP); (Creates a table)
+
     - > -- Add a column
     - > ALTER TABLE table_name ADD COLUMN new_column VARCHAR(100);
+
     - > -- Drop a column
     - > ALTER TABLE table_name DROP COLUMN column_name;
+
     - > DROP TABLE IF EXISTS table_name CASCADE; (Deletes an entire table, database, or schema permanently)
+
     - > TRUNCATE TABLE table_name RESTART IDENTITY CASCADE; (Quickly removes all rows from a table without scanning individual rows (faster than DELETE).)
 ---
